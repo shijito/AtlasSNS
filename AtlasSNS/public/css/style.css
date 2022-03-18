@@ -8,6 +8,89 @@ header{
     background:#186AC9;
 }
 
+/*↓アコーディオンメニュー　開いた状態の矢印描画まで*/
+/*アコーディオン全体*/
+.menu {
+  width: 100%;
+  padding: 10px 10px 20px;
+}
+.menu input {
+  display: none; /*チェックボックスを隠す*/
+}
+/*バー部分*/
+.menu label {
+  cursor :pointer;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  margin: 0 0 10px;
+  padding: 10px;
+
+}
+/*開いたときに表示される部分*/
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1px;
+}
+.menu li {
+  height: 0;
+  overflow-y: hidden;
+  transition: padding-bottom 0.5s, padding-top 0.5s; /*閉じるときのアニメーション*/
+  -webkit-transition: padding-bottom 0.5s, padding-top 0.5s;
+  -moz-transition: padding-bottom 0.5s, padding-top 0.5s;
+  -ms-transition: padding-bottom 0.5s, padding-top 0.5s;
+  -o-transition: padding-bottom 0.5s, padding-top 0.5s;
+}
+#menu_bar01:checked ~ #links01 li{
+  height: auto; /*開いたときに表示されるliの高さ*/
+  opacity: 1;
+  background: #f1f1f1;
+  padding: 10px;
+}
+ /*開いたときの下の余白*/
+#menu_bar01:checked ~ #links01 li:last-child{
+  margin-bottom: 20px;
+}
+/*閉じた状態の矢印描画*/
+.menu label:after{
+  content:"";
+  display:block;
+  width:8px;
+  height:8px;
+  border-top: #fff 2px solid;
+  border-right: #fff 2px solid;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+  position:absolute;
+  right: 2%;
+  top: 0;
+  bottom: 15%;
+  margin: auto;
+}
+/*開いた状態の矢印描画*/
+.menu input[type=checkbox]:checked + label:after{
+  content:"";
+  display:block;
+  width:8px;
+  height:8px;
+  border-top: #fff 2px solid;
+  border-right: #fff 2px solid;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position:absolute;
+  right: 2%;
+  top: 7%;
+  bottom: 0;
+  margin: auto;
+}
+/*アコーディオンメニュー終わり*/
+
 /* main content */
 #row{
     display: flex;

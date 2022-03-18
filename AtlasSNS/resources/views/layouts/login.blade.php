@@ -26,8 +26,10 @@
             <div id="">
                 <div id="">
                     <p>〇〇さん<img src="images/arrow.png"></p>
-                <div>
-                <ul>
+                <div class="menu">
+                    <input type="checkbox" id="menu_bar01"/>
+                    <label for="menu_bar01"></label>
+                <ul id="links01">
                     <li><a href="/top">ホーム</a></li>
                     <li><a href="/profile">プロフィール</a></li>
                     <li><a href="/logout">ログアウト</a></li>
