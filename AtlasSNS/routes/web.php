@@ -39,6 +39,6 @@ Route::get('/search','UsersController@index');
 Route::get('/follow-list','PostsController@index');
 Route::get('/follower-list','PostsController@index');
 
-//ログアウト時の遷移ルート
-Route::get('/logout','Auth\LoginController@login');
-Route::post('/logout','Auth\LoginController@login');
+//ログアウト
+Route::get('/logout','Auth\LoginController@logout');
+Route::post('/logout','Auth\LoginController@logout');
