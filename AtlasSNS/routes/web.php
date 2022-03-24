@@ -34,6 +34,7 @@ Route::get('/top','PostsController@index');
 
 Route::get('/profile','UsersController@profile');
 
+//検索リンク
 Route::get('/search','UsersController@search');
 
 

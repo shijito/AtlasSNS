@@ -1,6 +1,14 @@
 @extends('layouts.login')
 
 @section('content')
-<h2>機能を実装していきましょう。</h2>
+
+<form action="" method="post">
+  <div>
+    <textarea id="message" name="message"></textarea>
+  </div>
+  <div>
+    <input type="image" src="images/post.png">
+  </div>
+</form>
 
 @endsection
