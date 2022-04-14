@@ -26,6 +26,7 @@
             <div id="">
                 <div id="">
                     <p>〇〇さん<img src="images/arrow.png"></p>
+                </div>
                 <div class="menu">
                     <input type="checkbox" id="menu_bar01"/>
                     <label for="menu_bar01"></label>
